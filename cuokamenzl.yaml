@@ -1,7 +1,6 @@
 # NAME: 添加直连规则示例
 # AUTHOR: cuokamen
-# REPO: https://raw.githubusercontent.com/cuokamen/tvbx/refs/heads/main/%E6%B7%BB%E5%8A%A0%E7%9B%B4%E8%BF%9E%E8%A7%84%E5%88%99.yaml
-
+# REPO: https://github.com/cuokamen/tvbx/blob/main/cuokamenzl.yaml
 +rules:
   - "DOMAIN-SUFFIX,423down.com,DIRECT"
   - "DOMAIN-SUFFIX,sensuallove.xxx,DIRECT"
