@@ -71,7 +71,7 @@ function main(config) {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Global.png",
       "include-all": true,
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
-      proxies: ["AUTO", "TW AUTO","HK AUTO", "SG AUTO", "JP AUTO", "US AUTO"],
+      proxies: ["DIRECT","PROXY","AUTO", "TW AUTO","HK AUTO", "SG AUTO", "JP AUTO", "US AUTO"],
       name: "GLOBAL",
       type: "select",
     }
@@ -91,6 +91,38 @@ function main(config) {
     cn_domain: {
       url: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.yaml",
       path: "./ruleset/cn_domain.yaml",
+      behavior: "domain",
+      interval: 86400,
+      format: "yaml",
+      type: "http",
+    },
+    reject: {
+      url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt",
+      path: "./ruleset/reject.yaml",
+      behavior: "domain",
+      interval: 86400,
+      format: "yaml",
+      type: "http",
+    },
+    icloud: {
+      url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt",
+      path: "./ruleset/icloud.yaml",
+      behavior: "domain",
+      interval: 86400,
+      format: "yaml",
+      type: "http",
+    },
+    apple: {
+      url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt",
+      path: "./ruleset/apple.yaml",
+      behavior: "domain",
+      interval: 86400,
+      format: "yaml",
+      type: "http",
+    },
+    gfw: {
+      url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt",
+      path: "./ruleset/gfw.yaml",
       behavior: "domain",
       interval: 86400,
       format: "yaml",
@@ -196,6 +228,10 @@ function main(config) {
 
   config["rules"] = [
     "RULE-SET,private,DIRECT",
+    "RULE-SET,reject,REJECT",
+    "RULE-SET,icloud,DIRECT",
+    "RULE-SET,apple,DIRECT",
+    "RULE-SET,gfw,AIGC",
     "RULE-SET,bing,AIGC",
     "RULE-SET,copilot,AIGC",
     "RULE-SET,bard,AIGC",
