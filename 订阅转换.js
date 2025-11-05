@@ -26,7 +26,7 @@ function main(config) {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/CN.png",
       "include-all": true,
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
-      filter: "(?i)台湾|中国|Tai Wan|TW",
+      filter: "(?i)台湾|中国|CN|TW",
       name: "TW AUTO",
       type: "url-test",
       interval: 300,
