@@ -5,7 +5,7 @@ function main(config) {
       "include-all": true,
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       name: "PROXY",
-      输入: "select",
+      type: "select",
       proxies: ["AUTO","TW AUTO", "HK AUTO", "SG AUTO", "JP AUTO", "US AUTO"],
     },
     {
@@ -13,13 +13,13 @@ function main(config) {
       "include-all": true,
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       name: "AUTO",
-      输入: "url-test",
-      在terval: 300,
+      type: "url-test",
+      interval: 300,
     },
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/OpenAI.png",
       name: "AIGC",
-      输入: "select",
+      type: "select",
       proxies: ["AUTO", "TW AUTO","HK AUTO", "SG AUTO", "JP AUTO", "US AUTO"],
     },
    {
@@ -28,8 +28,8 @@ function main(config) {
       "exclude-filter": "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
       filter: "(?i)台湾|Tai Wan|TW",
       name: "TW AUTO",
-      输入: "url-test",
-      在terval: 300,
+      type: "url-test",
+      interval: 300,
     },
     {
       icon: "https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/HK.png",
