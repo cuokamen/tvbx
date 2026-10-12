@@ -146,6 +146,7 @@ function main(config) {
     "RULE-SET,geolocation-!cn,AIGC",
     "RULE-SET,cn_domain,DIRECT",
     "RULE-SET,cn_ip,DIRECT",
+    "GEOIP,CN,DIRECT",
     "MATCH,PROXY",
   ];
   return config;
